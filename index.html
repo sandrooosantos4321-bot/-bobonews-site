@@ -2,10 +2,70 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Descontos BOBÔ - Cupom Carla.bobonews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontos BOBÔ - Cupom Carla</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff6f61, #ffccbc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cupom {
+            background-color: #ffeb3b;
+            padding: 15px 25px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+        .cupom:hover {
+            background-color: #fdd835;
+        }
+    </style>
 </head>
 <body>
-    <h1>Descontos Exclusivos BOBÔ</h1>
-    <p>Use o código <strong>BBOKN9051</strong> da Carla.bobonews para ganhar descontos na loja BOBÔ.</p>
-    <p>Página oficial do cupom.</p
+    <div class="container">
+        <h1>Descontos Exclusivos BOBÔ</h1>
+        <p>Siga no Instagram: <a href="https://www.instagram.com/carla.bobonews" target="_blank">@carla.bobonews</a></p>
+        <p>Clique no botão para copiar o cupom:</p>
+        <div class="cupom" onclick="copyCupom()">BB0KN9051</div>
+        <p>Página oficial do cupom.</p>
+    </div>
+
+    <script>
+        function copyCupom() {
+            const cupom = document.querySelector('.cupom').innerText;
+            navigator.clipboard.writeText(cupom)
+                .then(() => alert('Código copiado: ' + cupom));
+        }
+    </script>
+</body>
+</html>
